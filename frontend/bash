@@ -1,2 +1,2 @@
-cd menfa-platform/frontend
+cd menfa-platform
 streamlit run app.py
