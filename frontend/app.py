@@ -39,3 +39,12 @@ col3.metric("Torque", round(piz.get("torque", 0), 2))
 
 st.subheader("Eventos activos")
 st.write(piz.get("eventos", []))
+if "token" not in st.session_state:
+    user = st.text_input("Usuario")
+    pwd = st.text_input("Password", type="password")
+
+    if st.button("Login"):
+        res = login(user, pwd)
+        st.session_state.token = res["token"]
+        st.session_state.rol = res["rol"]
+        st.rerun()
