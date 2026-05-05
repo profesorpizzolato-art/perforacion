@@ -7,3 +7,4 @@ def generar_certificado(nombre):
     content.append(Paragraph(f"Certificado MENFA para {nombre}", None))
 
     doc.build(content)
+Paragraph(f"Puntaje final: {score}", styles["Normal"])
