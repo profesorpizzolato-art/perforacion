@@ -1,27 +1,13 @@
-menfa-plataforma/
+menfa-platform/
 │
-├── frontend/                # Streamlit (UI)
-│   ├── app.py
-│   ├── api_client.py
-│   ├── ui/
-│   └── assets/
+├── frontend/                # UI (Streamlit ahora, luego migrable a React)
+├── backend/                 # API principal
+├── sim_engine/              # Motor físico (tu diferencial)
+├── realtime/                # WebSockets (tiempo real real)
+├── database/                # PostgreSQL
+├── analytics/               # métricas y performance
+├── payments/                # ventas de cursos
+├── reports/                 # certificados y PDFs
+├── ai/                      # (opcional futuro: asistente técnico)
 │
-├── backend/                 # FastAPI (API + lógica)
-│   ├── main.py
-│   ├── routes/
-│   ├── services/
-│   ├── models/
-│   └── core/
-│
-├── sim_engine/              # 🔥 MOTOR REAL (tu repo limpio)
-│   ├── engine.py
-│   ├── perforacion/
-│   ├── geonavegacion/
-│   ├── torque_drag/
-│   └── eventos/
-│
-├── shared/                  # contratos comunes
-│   └── schemas.py
-│
-├── requirements.txt
-└── README.md
+└── docker-compose.yml       # despliegue PRO
