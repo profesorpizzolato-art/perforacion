@@ -1,0 +1,2 @@
+cd menfa-platform/frontend
+streamlit run app.py
