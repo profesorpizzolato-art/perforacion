@@ -1,0 +1,27 @@
+menfa-plataforma/
+│
+├── frontend/                # Streamlit (UI)
+│   ├── app.py
+│   ├── api_client.py
+│   ├── ui/
+│   └── assets/
+│
+├── backend/                 # FastAPI (API + lógica)
+│   ├── main.py
+│   ├── routes/
+│   ├── services/
+│   ├── models/
+│   └── core/
+│
+├── sim_engine/              # 🔥 MOTOR REAL (tu repo limpio)
+│   ├── engine.py
+│   ├── perforacion/
+│   ├── geonavegacion/
+│   ├── torque_drag/
+│   └── eventos/
+│
+├── shared/                  # contratos comunes
+│   └── schemas.py
+│
+├── requirements.txt
+└── README.md
