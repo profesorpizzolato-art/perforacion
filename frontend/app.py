@@ -48,3 +48,14 @@ if "token" not in st.session_state:
         st.session_state.token = res["token"]
         st.session_state.rol = res["rol"]
         st.rerun()
+st.subheader("🛢️ Panel de Control")
+
+col1, col2, col3, col4 = st.columns(4)
+
+col1.metric("ROP", piz["rop"])
+col2.metric("HHP", piz["hhp"])
+col3.metric("Torque", piz["torque"])
+col4.metric("Presión", piz["presion"])
+
+if "alerta" in piz:
+    st.error(piz["alerta"])
