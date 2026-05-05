@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "8501:8501"
+
+  db:
+    image: postgres
+    environment:
+      POSTGRES_USER: menfa
+      POSTGRES_PASSWORD: 1234
