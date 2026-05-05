@@ -25,3 +25,23 @@ def run_simulation(state):
     resultado["eventos"] = eventos
 
     return resultado
+def run_simulation(state):
+    wob = state["wob"]
+    rpm = state["rpm"]
+    presion = state["presion"]
+    caudal = state["caudal"]
+
+    rop = (wob * rpm) / 100
+    hhp = (presion * caudal) / 1714
+    torque = rpm * 0.5
+
+    eventos = []
+    if presion < 500:
+        eventos.append("KICK")
+
+    return {
+        "rop": rop,
+        "hhp": hhp,
+        "torque": torque,
+        "eventos": eventos
+    }
